@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153f39">
+  <title>Matemática VII · Repaso para el examen</title>
+  <style>
+    :root{--ink:#17332f;--muted:#60746f;--paper:#fffdf7;--green:#17675a;--lime:#d9f269;--coral:#f27858;--line:#dce7df;--soft:#edf5ef;--shadow:0 16px 45px #17332f12}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 ui-rounded,"Avenir Next",Avenir,system-ui,-apple-system,sans-serif}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.topbar{padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-weight:850;letter-spacing:-.03em}.brand span{color:var(--green)}.tag{font-size:.82rem;color:var(--muted);border:1px solid var(--line);padding:6px 12px;border-radius:99px}
+    .hero{background:var(--green);color:white;border-radius:28px;padding:clamp(28px,6vw,68px);position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero:after{content:"∠";font-family:Georgia,serif;font-size:290px;line-height:1;position:absolute;right:2%;bottom:-70px;color:#ffffff13;transform:rotate(-9deg)}.hero>*{position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.75rem;color:var(--lime)}h1{font-size:clamp(2.1rem,5.5vw,4.2rem);line-height:1.02;letter-spacing:-.06em;max-width:700px;margin:14px 0 20px}.hero p{max-width:660px;font-size:1.08rem;color:#e1eee7;margin:0}.hero-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px}.button{border:0;border-radius:999px;padding:11px 18px;font:inherit;font-weight:750;cursor:pointer;text-decoration:none;display:inline-block}.button.primary{background:var(--lime);color:var(--ink)}.button.ghost{color:white;border:1px solid #ffffff55;background:transparent}.progress{font-size:.85rem;color:#e1eee7;margin-left:4px}
+    nav{display:flex;gap:8px;overflow:auto;padding:18px 0 14px;scrollbar-width:thin}.navlink{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.91rem;font-weight:700;padding:8px 13px;border-radius:99px}.navlink:hover,.navlink:focus{background:var(--soft);color:var(--green)}main{padding-bottom:64px}.section{padding:42px 0 10px;scroll-margin-top:20px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}.section-head h2{font-size:clamp(1.65rem,3vw,2.3rem);letter-spacing:-.045em;line-height:1.1;margin:0}.section-head p{color:var(--muted);margin:0;max-width:510px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 6px 20px #17332f08}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-8{grid-column:span 8}.span-12{grid-column:span 12}.card h3{margin:0 0 8px;font-size:1.1rem;letter-spacing:-.025em}.card p{margin:7px 0;color:var(--muted)}.card ul{margin:8px 0 0;padding-left:20px}.card li{margin:5px 0}.callout{background:#f1f8dc;border:0}.pill{display:inline-block;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--green);background:var(--soft);padding:4px 9px;border-radius:99px;margin-bottom:10px}.math{font-family:Georgia,"Times New Roman",serif;font-size:1.1rem;color:var(--ink);background:#f8f8f3;border-radius:10px;padding:9px 12px;display:block;margin:10px 0}.example{border-left:3px solid var(--coral);padding:4px 0 4px 14px;margin:14px 0}.example strong{color:var(--green)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:420px}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:.83rem;color:var(--muted)}
+    .toolrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}.toolrow input,.answer-input{width:110px;border:1px solid #bfcec4;border-radius:10px;padding:9px 11px;font:inherit;color:var(--ink);background:white}.toolrow select{border:1px solid #bfcec4;border-radius:10px;padding:9px 11px;font:inherit;background:white;color:var(--ink)}button.small{border:0;border-radius:10px;background:var(--green);color:white;padding:10px 14px;font:inherit;font-weight:750;cursor:pointer}.result{font-weight:750;min-height:1.5em;color:var(--green)}.question{padding:15px 0;border-bottom:1px solid var(--line)}.question:last-child{border-bottom:0}.question p{color:var(--ink);margin:0 0 8px}.question label{display:flex;gap:8px;align-items:center}.question input{max-width:130px}.quiz-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:15px}.note{font-size:.88rem;color:var(--muted)}details{border-top:1px solid var(--line);margin-top:12px;padding-top:10px}summary{font-weight:750;color:var(--green);cursor:pointer}.answer{font-size:.92rem;color:var(--muted)}.checklist{display:grid;gap:10px}.checklist label{display:flex;gap:10px;align-items:flex-start}.checklist input{margin-top:6px;accent-color:var(--green)}.checklist label.done span{text-decoration:line-through;color:#82928c}.footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.88rem}.tiny{font-size:.8rem;color:var(--muted)}
+    .worksheet{margin:12px 0 0}.worksheet a{display:block}.worksheet img{display:block;width:100%;height:430px;object-fit:contain;object-position:top center;background:#f7f8f5;border:1px solid var(--line);border-radius:12px}.worksheet figcaption{font-size:.9rem;font-weight:750;margin-top:10px}.worksheet .tiny{margin-top:2px}.segment-worksheet img{height:560px}
+    @media(max-width:760px){.span-4,.span-6,.span-8{grid-column:span 12}.section-head{display:block}.section-head p{margin-top:8px}.hero:after{right:-40px;opacity:.7}.topbar{align-items:flex-start}}
+    @media print{body{background:white}.topbar nav,.hero-row,.toolrow button,.quiz-actions button{display:none!important}.hero{background:white;color:var(--ink);border:1px solid var(--line);box-shadow:none}.hero p,.progress{color:var(--muted)}.hero:after{color:#edf5ef}.card{box-shadow:none;break-inside:avoid}.section{padding-top:22px}.navlink{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar"><div class="brand">Mate<span>VII</span> <span aria-hidden="true">✳</span></div><div class="tag">Guía de estudio · III trimestre 2026</div></header>
+    <section class="hero" aria-labelledby="title">
+      <div class="eyebrow">Taller I · Séptimo año</div>
+      <h1 id="title">Geometría: puntos, rectas y ángulos</h1>
+      <p>Un repaso claro para estudiar la materia del examen: conceptos, ejemplos resueltos y ejercicios para practicar a tu ritmo.</p>
+      <div class="hero-row"><a class="button primary" href="#temas">Empezar a estudiar ↓</a><button class="button ghost" onclick="window.print()">Imprimir guía</button><span class="progress" id="progressText">Progreso: 0 de 6 temas</span></div>
+    </section>
+    <nav aria-label="Secciones de estudio">
+      <a class="navlink" href="#temas">Temas</a><a class="navlink" href="#rectas">Rectas y segmentos</a><a class="navlink" href="#angulos">Ángulos</a><a class="navlink" href="#calcular">Cálculo rápido</a><a class="navlink" href="#practica">Práctica</a><a class="navlink" href="#repaso">Lista de repaso</a>
+    </nav>
+    <main>
+      <section class="section" id="temas">
+        <div class="section-head"><h2>1. Lo que entra en el examen</h2><p>Esta guía sigue los objetivos del temario de Matemática de séptimo año para el Taller I.</p></div>
+        <div class="grid">
+          <article class="card span-4"><span class="pill">Ideas básicas</span><h3>Punto, recta y plano</h3><p>Son conceptos primitivos: se aceptan como ideas fundamentales y se usan para describir las demás figuras.</p><ul><li><b>Punto:</b> indica una posición; se nombra con letra mayúscula.</li><li><b>Recta:</b> se extiende sin fin en dos direcciones.</li><li><b>Plano:</b> superficie plana que continúa en todas direcciones.</li></ul></article>
+          <article class="card span-4"><span class="pill">Rectas</span><h3>Cómo se relacionan</h3><p>Dos rectas en un plano pueden ser paralelas, perpendiculares u oblicuas.</p><ul><li><b>Paralelas:</b> nunca se cruzan y mantienen la misma distancia.</li><li><b>Perpendiculares:</b> se cruzan formando cuatro ángulos rectos.</li><li><b>Oblicuas:</b> se cruzan, pero no forman ángulos de 90°.</li></ul></article>
+          <article class="card span-4"><span class="pill">Partes de la recta</span><h3>Semirrecta, rayo y segmento</h3><p>Un <b>segmento</b> tiene dos extremos y una longitud definida. Una <b>semirrecta</b> empieza en un punto y continúa sin fin en una dirección. En algunos materiales escolares se usa “rayo” como sinónimo de semirrecta.</p></article>
+        </div>
+      </section>
+      <section class="section" id="rectas">
+        <div class="section-head"><h2>2. Longitud de segmentos</h2><p>Si los puntos están en una misma recta, fijate en el orden y en la distancia entre ellos.</p></div>
+        <div class="grid">
+          <article class="card span-6"><h3>Regla de adición</h3><p>Si B está entre A y C, entonces la longitud total es la suma de las partes:</p><span class="math">AB + BC = AC</span><div class="example"><strong>Ejemplo:</strong> AB = 4 cm y BC = 7 cm. Entonces AC = 4 + 7 = <b>11 cm</b>.</div><p class="tiny">Cuando conocés la longitud total y una parte, restá para encontrar la otra.</p></article>
+          <article class="card span-6 callout"><h3>Ejemplo con una incógnita</h3><p>AB = 2x + 1, BC = 3 y AC = 14. Como AB + BC = AC:</p><span class="math">(2x + 1) + 3 = 14 → 2x = 10 → x = 5</span><p>Así, AB = 2(5) + 1 = <b>11</b> y BC = 3. Comprobación: 11 + 3 = 14.</p></article>
+        </div>
+        <div class="section-head" style="margin-top:28px"><h2>Práctica adicional: suma de segmentos</h2><p>Estas hojas sí complementan el examen: practican longitudes de segmentos, ecuaciones y punto medio. Tocá una para ampliarla.</p></div>
+        <div class="grid">
+          <article class="card span-6"><figure class="worksheet segment-worksheet"><a href="imagenes/postulado-suma-segmentos-1.png" target="_blank" rel="noopener"><img src="imagenes/postulado-suma-segmentos-1.png" alt="Hoja con seis ejercicios del postulado de suma de segmentos, incluyendo longitudes y puntos medios"></a><figcaption>Postulado de suma de segmentos · Hoja A</figcaption><p class="tiny">Incluye problemas de encontrar x, longitudes AB y BC, y punto medio.</p></figure></article>
+          <article class="card span-6"><figure class="worksheet segment-worksheet"><a href="imagenes/postulado-suma-segmentos-2.png" target="_blank" rel="noopener"><img src="imagenes/postulado-suma-segmentos-2.png" alt="Hoja con seis ejercicios para calcular segmentos usando longitudes parciales y totales"></a><figcaption>Postulado de suma de segmentos · Hoja B</figcaption><p class="tiny">Practicá sumar partes para encontrar la longitud total o una parte faltante.</p></figure></article>
+          <article class="card span-6"><figure class="worksheet segment-worksheet"><a href="imagenes/postulado-suma-segmentos-3.png" target="_blank" rel="noopener"><img src="imagenes/postulado-suma-segmentos-3.png" alt="Hoja con seis ejercicios adicionales para hallar longitudes de segmentos y aplicar el punto medio"></a><figcaption>Postulado de suma de segmentos · Hoja C</figcaption><p class="tiny">Incluye ecuaciones con x y ejercicios de punto medio.</p></figure></article>
+        </div>
+      </section>
+      <section class="section" id="angulos">
+        <div class="section-head"><h2>3. Clases de ángulos</h2><p>Un ángulo se forma con dos semirrectas que salen del mismo punto, llamado vértice.</p></div>
+        <div class="grid">
+          <article class="card span-6"><h3>Según su medida</h3><div class="table-wrap"><table><thead><tr><th>Tipo</th><th>Medida</th><th>Idea para reconocerlo</th></tr></thead><tbody><tr><td>Nulo</td><td>0°</td><td>Sus lados quedan superpuestos.</td></tr><tr><td>Agudo</td><td>Entre 0° y 90°</td><td>Más pequeño que una esquina recta.</td></tr><tr><td>Recto</td><td>90°</td><td>Forma una esquina cuadrada.</td></tr><tr><td>Obtuso</td><td>Entre 90° y 180°</td><td>Más abierto que el recto y menos que el llano.</td></tr><tr><td>Llano</td><td>180°</td><td>Forma una línea recta.</td></tr></tbody></table></div></article>
+          <article class="card span-6"><h3>Según su posición o relación</h3><ul><li><b>Consecutivos:</b> comparten vértice y un lado.</li><li><b>Adyacentes:</b> son consecutivos y sus lados no comunes forman una línea recta; suman 180°.</li><li><b>Opuestos por el vértice:</b> aparecen frente a frente cuando se cruzan dos rectas; miden lo mismo.</li><li><b>Congruentes:</b> tienen la misma medida.</li></ul><div class="example"><strong>Tip:</strong> “consecutivos” describe que están pegados; “adyacentes” además indica que juntos forman un ángulo llano.</div></article>
+          <article class="card span-12 callout"><h3>Complementarios y suplementarios</h3><div class="two-col"><p><b>Complementarios:</b> suman 90°. Si uno mide 33°, su complemento es 90° − 33° = <b>57°</b>.</p><p><b>Suplementarios:</b> suman 180°. Si uno mide 33°, su suplemento es 180° − 33° = <b>147°</b>.</p></div><p class="tiny">La suma es lo que manda: los complementarios no tienen que estar dibujados juntos, y lo mismo pasa con los suplementarios.</p></article>
+        </div>
+      </section>
+      <section class="section" id="calcular">
+        <div class="section-head"><h2>4. Calculá un complemento o suplemento</h2><p>Elegí el tipo, escribí el ángulo y comprobá tu respuesta.</p></div>
+        <article class="card span-12">
+          <div class="toolrow"><label for="angleValue">Ángulo en grados</label><input id="angleValue" type="number" min="0" max="180" placeholder="ej. 51"><label for="angleKind">Buscar</label><select id="angleKind"><option value="90">Complemento (hasta 90°)</option><option value="180">Suplemento (hasta 180°)</option></select><button class="small" id="calcButton">Calcular</button></div>
+          <p class="result" id="calcResult" aria-live="polite"></p><p class="tiny">Método: restá el ángulo dado de 90° o de 180°. El complemento solo existe para ángulos de hasta 90°.</p>
+        </article>
+      </section>
+      <section class="section" id="practica">
+        <div class="section-head"><h2>5. Practicá como en las hojas</h2><p>Primero intentá resolver cada ejercicio. Después podés revisar la respuesta paso a paso.</p></div>
+        <div class="grid">
+          <article class="card span-6"><span class="pill">Clasificar</span><h3>¿Complementarios o suplementarios?</h3>
+            <div class="question"><p>33° y 57°</p><details><summary>Ver respuesta</summary><p class="answer">Complementarios: 33° + 57° = 90°.</p></details></div>
+            <div class="question"><p>100° y 80°</p><details><summary>Ver respuesta</summary><p class="answer">Suplementarios: 100° + 80° = 180°.</p></details></div>
+            <div class="question"><p>45° y 45°</p><details><summary>Ver respuesta</summary><p class="answer">Complementarios: 45° + 45° = 90°.</p></details></div>
+            <div class="question"><p>121° y 59°</p><details><summary>Ver respuesta</summary><p class="answer">Suplementarios: 121° + 59° = 180°.</p></details></div>
+          </article>
+          <article class="card span-6"><span class="pill">Encontrar el ángulo que falta</span><h3>Usá 90° o 180°</h3>
+            <div class="question"><p>Complemento de 85°</p><details><summary>Ver respuesta</summary><p class="answer">90° − 85° = <b>5°</b>.</p></details></div>
+            <div class="question"><p>Suplemento de 99°</p><details><summary>Ver respuesta</summary><p class="answer">180° − 99° = <b>81°</b>.</p></details></div>
+            <div class="question"><p>Complemento de 27°</p><details><summary>Ver respuesta</summary><p class="answer">90° − 27° = <b>63°</b>.</p></details></div>
+            <div class="question"><p>Suplemento de 171°</p><details><summary>Ver respuesta</summary><p class="answer">180° − 171° = <b>9°</b>.</p></details></div>
+          </article>
+          <article class="card span-12"><span class="pill">Problemas con ecuaciones</span><h3>Traducí las palabras a una ecuación</h3>
+            <p>Cuando un problema dice “el otro ángulo”, llamá <i>x</i> a uno de ellos y expresá el segundo usando la relación indicada.</p>
+            <div class="grid">
+              <div class="card span-6"><b>1. Complementarios; uno mide 24° menos que el otro.</b><p>Sea x el mayor: x + (x − 24) = 90. Entonces x = 57° y el otro mide <b>33°</b>.</p></div>
+              <div class="card span-6"><b>2. Suplementarios; uno mide 60° más que el triple del otro.</b><p>x + (3x + 60) = 180. Entonces x = 30°; el mayor es 3(30) + 60 = <b>150°</b>.</p></div>
+              <div class="card span-6"><b>3. Suplementarios en razón 1 : 4.</b><p>Los ángulos son x y 4x. x + 4x = 180, así que x = 36°. Miden <b>36° y 144°</b>.</p></div>
+              <div class="card span-6"><b>4. Complementarios; uno es 9° mayor que el doble del otro.</b><p>x + (2x + 9) = 90. Entonces x = <b>27°</b>, que es el ángulo menor.</p></div>
+              <div class="card span-12"><b>5. Suplementarios; uno mide 48° menos que el otro.</b><p>x + (x − 48) = 180. Entonces x = 114° y el otro es <b>66°</b>.</p></div>
+            </div>
+            <p class="note">Revisá siempre la respuesta: los complementarios deben sumar 90° y los suplementarios, 180°.</p>
+          </article>
+          <article class="card span-12 callout"><h3>Una posible errata en la práctica adjunta</h3><p>En la segunda hoja, el ejercicio 6 muestra “9°” como encabezado, pero las dos preguntas de abajo dicen “Complement of 65°” y “Supplement of 65°”. El portal conserva el valor que aparece en las preguntas: complemento de 65° = 25° y suplemento de 65° = 115°. Conviene confirmar con la docente o el docente cuál número quería usar.</p></article>
+        </div>
+        <div class="section-head" style="margin-top:28px"><h2>Hojas originales para practicar</h2><p>Las fotos están incluidas completas. Tocá una para abrirla en tamaño grande.</p></div>
+        <div class="grid">
+          <article class="card span-4"><figure class="worksheet"><a href="imagenes/angulos-problemas.jpg" target="_blank" rel="noopener"><img src="imagenes/angulos-problemas.jpg" alt="Hoja de práctica con cinco problemas de ecuaciones sobre ángulos complementarios y suplementarios"></a><figcaption>Problemas de ángulos</figcaption><p class="tiny">Plantear ecuaciones y encontrar medidas.</p></figure></article>
+          <article class="card span-4"><figure class="worksheet"><a href="imagenes/complementos-suplementos.jpg" target="_blank" rel="noopener"><img src="imagenes/complementos-suplementos.jpg" alt="Hoja para calcular complementos y suplementos de distintos ángulos"></a><figcaption>Complementos y suplementos</figcaption><p class="tiny">Practicá restando a 90° o 180°.</p></figure></article>
+          <article class="card span-4"><figure class="worksheet"><a href="imagenes/clasificar-angulos.jpg" target="_blank" rel="noopener"><img src="imagenes/clasificar-angulos.jpg" alt="Hoja para clasificar pares de ángulos y calcular complementos o suplementos"></a><figcaption>Clasificación y cálculo</figcaption><p class="tiny">Identificá pares complementarios o suplementarios.</p></figure></article>
+        </div>
+      </section>
+      <section class="section" id="repaso">
+        <div class="section-head"><h2>6. Lista rápida antes del examen</h2><p>Marcá lo que ya podés hacer sin ayuda. El progreso queda guardado en este navegador.</p></div>
+        <article class="card span-12"><div class="checklist" id="checklist">
+          <label><input type="checkbox" data-topic="punto"><span>Explico qué representan un punto, una recta y un plano.</span></label>
+          <label><input type="checkbox" data-topic="rectas"><span>Distingo rectas paralelas, perpendiculares y oblicuas.</span></label>
+          <label><input type="checkbox" data-topic="segmentos"><span>Reconozco semirrecta, rayo y segmento, y calculo longitudes.</span></label>
+          <label><input type="checkbox" data-topic="medida"><span>Clasifico ángulos por su medida: nulo, agudo, recto, obtuso y llano.</span></label>
+          <label><input type="checkbox" data-topic="relacion"><span>Reconozco ángulos consecutivos, adyacentes y opuestos por el vértice.</span></label>
+          <label><input type="checkbox" data-topic="ecuaciones"><span>Uso una ecuación para resolver problemas de ángulos complementarios y suplementarios.</span></label>
+        </div><p class="result" id="checkMessage" aria-live="polite"></p><button class="small" id="resetProgress">Borrar mi progreso</button></article>
+      </section>
+      <section class="section" id="fuentes">
+        <div class="section-head"><h2>Material usado</h2></div>
+        <article class="card span-12"><p>Temario para Taller I, Matemática, nivel VII, III trimestre 2026, con fecha indicada 02-10-2026; y las tres hojas de práctica de ángulos adjuntas.</p><p class="tiny">La guía organiza esos contenidos y añade ejemplos explicativos. Para preparar el examen, también repasá las prácticas, guías y apuntes del cuaderno que señala el temario.</p></article>
+      </section>
+    </main>
+    <footer class="footer">Hecho para estudiar paso a paso. Las respuestas se pueden revelar después de intentar cada ejercicio.</footer>
+  </div>
+  <script>
+    const boxes=[...document.querySelectorAll('#checklist input')];
+    const progressText=document.getElementById('progressText');
+    const checkMessage=document.getElementById('checkMessage');
+    function refreshProgress(){let count=0;boxes.forEach(box=>{const done=localStorage.getItem('mate-vii-'+box.dataset.topic)==='1';box.checked=done;box.closest('label').classList.toggle('done',done);if(done)count++});progressText.textContent=`Progreso: ${count} de ${boxes.length} temas`;checkMessage.textContent=count===boxes.length?'¡Listo! Ya repasaste todos los objetivos de esta guía.':`${count} de ${boxes.length} objetivos marcados.`}
+    boxes.forEach(box=>box.addEventListener('change',()=>{localStorage.setItem('mate-vii-'+box.dataset.topic,box.checked?'1':'0');refreshProgress()}));
+    document.getElementById('resetProgress').addEventListener('click',()=>{boxes.forEach(box=>localStorage.removeItem('mate-vii-'+box.dataset.topic));refreshProgress()});
+    document.getElementById('calcButton').addEventListener('click',()=>{const raw=document.getElementById('angleValue').value;const value=Number(raw);const total=Number(document.getElementById('angleKind').value);const output=document.getElementById('calcResult');if(raw===''||value<0||value>180){output.textContent='Escribí un ángulo entre 0° y 180°.';return}if(total===90&&value>90){output.textContent='Un ángulo mayor que 90° no tiene complemento positivo.';return}output.textContent=`${total}° − ${value}° = ${total-value}°`;});
+    refreshProgress();
+  </script>
+</body>
+</html>
