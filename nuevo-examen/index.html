@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153f39">
+  <title>Matemática VII · Nuevo examen</title>
+  <style>
+    :root{--ink:#17332f;--muted:#60746f;--paper:#fffdf7;--green:#17675a;--lime:#d9f269;--coral:#f27858;--line:#dce7df;--soft:#edf5ef;--shadow:0 16px 45px #17332f12}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 ui-rounded,"Avenir Next",Avenir,system-ui,-apple-system,sans-serif}a{color:inherit}
+    .wrap{width:min(1080px,calc(100% - 36px));margin:auto}.topbar{padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-weight:850;letter-spacing:-.03em}.brand span{color:var(--green)}.tag,.pill{font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--soft);padding:5px 10px;border-radius:99px}
+    .hero{background:var(--green);color:white;border-radius:28px;padding:clamp(28px,6vw,64px);position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero:after{content:"△";font-family:Georgia,serif;font-size:280px;line-height:1;position:absolute;right:3%;bottom:-82px;color:#ffffff13}.hero>*{position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-weight:800;font-size:.75rem;color:var(--lime)}h1{font-size:clamp(2.05rem,5.2vw,4rem);line-height:1.03;letter-spacing:-.055em;max-width:760px;margin:14px 0 18px}.hero p{max-width:650px;color:#e1eee7;margin:0;font-size:1.08rem}.hero-row{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px}.button{border:0;border-radius:999px;padding:10px 16px;font:inherit;font-weight:750;cursor:pointer;text-decoration:none;display:inline-block}.button.primary{background:var(--lime);color:var(--ink)}.button.ghost{background:transparent;color:white;border:1px solid #ffffff66}
+    nav{display:flex;gap:8px;overflow:auto;padding:18px 0 12px}.navlink{text-decoration:none;white-space:nowrap;color:var(--muted);font-size:.9rem;font-weight:700;padding:8px 12px;border-radius:99px}.navlink:hover,.navlink:focus{background:var(--soft);color:var(--green)}main{padding-bottom:56px}.section{padding:38px 0 8px;scroll-margin-top:16px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}.section-head h2{font-size:clamp(1.55rem,3vw,2.15rem);letter-spacing:-.04em;line-height:1.12;margin:0}.section-head p{color:var(--muted);max-width:500px;margin:0}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px}.card{grid-column:span 6;background:white;border:1px solid var(--line);border-radius:20px;padding:21px;box-shadow:0 6px 20px #17332f08}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-12{grid-column:span 12}.card h3{margin:0 0 8px;font-size:1.08rem;letter-spacing:-.025em}.card p{margin:7px 0;color:var(--muted)}.card ul{margin:8px 0 0;padding-left:20px}.card li{margin:5px 0}.callout{background:#f1f8dc;border-color:transparent}.math{display:block;background:#f7f8f3;border-radius:10px;padding:10px 13px;margin:10px 0;font:1.08rem Georgia,"Times New Roman",serif}.example{border-left:3px solid var(--coral);padding:4px 0 4px 13px;margin-top:13px}.example strong{color:var(--green)}
+    .triangle-art{display:block;width:100%;height:auto;max-height:185px;margin:8px auto}.rule{display:flex;gap:10px;align-items:flex-start}.rule-number{flex:0 0 30px;height:30px;border-radius:10px;background:var(--lime);display:grid;place-items:center;font-weight:850;color:var(--ink)}
+    .angle-art{width:100%;height:auto;display:block;background:#f8faf7;border-radius:14px;margin:4px 0 12px}.angle-art .line{stroke:#17675a;stroke-width:3}.angle-art .transversal{stroke:#f27858;stroke-width:3}.angle-art .cross{fill:#17332f}.angle-art .n{font:700 15px system-ui;fill:#17332f}.angle-art .desc{font:12px system-ui;fill:#60746f}
+    .table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:480px}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:.82rem;color:var(--muted)}.note{font-size:.88rem;color:var(--muted)}details{border-top:1px solid var(--line);margin-top:12px;padding-top:10px}summary{font-weight:750;color:var(--green);cursor:pointer}.answer{font-size:.93rem;color:var(--muted)}
+    .question{padding:14px 0;border-bottom:1px solid var(--line)}.question:last-child{border-bottom:0}.question p{color:var(--ink);margin:0 0 7px}.quiz{display:grid;gap:14px}.quiz-q{padding:14px 0;border-bottom:1px solid var(--line)}.quiz-q p{margin:0 0 8px;font-weight:700}.quiz-q label{display:flex;gap:9px;align-items:flex-start;margin:5px 0;color:var(--muted)}.quiz-q input{margin-top:5px;accent-color:var(--green)}.quiz-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:16px}button.small{border:0;border-radius:10px;background:var(--green);color:white;padding:10px 14px;font:inherit;font-weight:750;cursor:pointer}.result{font-weight:750;color:var(--green);min-height:1.5em}.checklist{display:grid;gap:10px}.checklist label{display:flex;gap:10px;align-items:flex-start}.checklist input{margin-top:6px;accent-color:var(--green)}.checklist label.done span{text-decoration:line-through;color:#82928c}.footer{border-top:1px solid var(--line);padding:24px 0 38px;color:var(--muted);font-size:.87rem}.back{font-weight:750;color:var(--green)}
+    @media(max-width:760px){.card,.span-4,.span-6{grid-column:span 12}.section-head{display:block}.section-head p{margin-top:8px}.hero:after{right:-38px;opacity:.75}.topbar{align-items:flex-start}table{min-width:400px}}
+    @media print{.topbar nav,nav,.hero-row,.quiz-actions{display:none!important}.hero{background:white;color:var(--ink);border:1px solid var(--line);box-shadow:none}.hero p{color:var(--muted)}.hero:after{color:#edf5ef}.card{box-shadow:none;break-inside:avoid}.section{padding-top:20px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar"><div class="brand">Mate<span>VII</span> <span aria-hidden="true">✳</span></div><div class="tag">Nuevo examen · Materia nueva</div></header>
+    <section class="hero" aria-labelledby="title">
+      <div class="eyebrow">Repaso 2 · Séptimo año</div>
+      <h1 id="title">Triángulos y ángulos con paralelas</h1>
+      <p>Una página nueva para practicar dos temas: propiedades de los triángulos y relaciones entre ángulos cuando una transversal cruza rectas paralelas.</p>
+      <div class="hero-row"><a class="button primary" href="#triangulos">Empezar el repaso ↓</a><button class="button ghost" id="printPage">Imprimir esta guía</button><a class="button ghost" href="../index.html">Volver al repaso anterior ↗</a></div>
+    </section>
+    <nav aria-label="Secciones de la página">
+      <a class="navlink" href="#triangulos">Triángulos</a><a class="navlink" href="#teoremas">Reglas y teoremas</a><a class="navlink" href="#transversal">Paralelas y transversal</a><a class="navlink" href="#practica">Práctica guiada</a><a class="navlink" href="#quiz">Quiz</a><a class="navlink" href="#repaso">Lista de repaso</a>
+    </nav>
+    <main>
+      <section class="section" id="triangulos">
+        <div class="section-head"><h2>1. Clasificación de triángulos</h2><p>Un triángulo se puede clasificar por sus lados y, por aparte, por sus ángulos.</p></div>
+        <div class="grid">
+          <article class="card span-6"><span class="pill">Según sus lados</span><h3>Tres categorías</h3><ul><li><b>Equilátero:</b> sus tres lados miden lo mismo. Sus tres ángulos también son iguales: 60° cada uno.</li><li><b>Isósceles:</b> tiene dos lados iguales; los ángulos opuestos a esos lados también son iguales.</li><li><b>Escaleno:</b> sus tres lados tienen medidas distintas.</li></ul><div class="example"><strong>Ejemplo:</strong> lados 6, 6 y 9 → isósceles.</div></article>
+          <article class="card span-6"><span class="pill">Según sus ángulos</span><h3>Tres categorías más</h3><ul><li><b>Acutángulo:</b> sus tres ángulos son menores de 90°.</li><li><b>Rectángulo:</b> tiene un ángulo de 90°.</li><li><b>Obtusángulo:</b> tiene un ángulo mayor de 90° y menor de 180°.</li></ul><p>Las dos clasificaciones se pueden combinar: un triángulo puede ser isósceles y rectángulo, o escaleno y obtusángulo.</p></article>
+          <article class="card span-12 callout"><div class="rule"><div class="rule-number">!</div><div><h3>Importante: clasificá con el dato correcto</h3><p>Si te dan las longitudes, clasificá por lados. Si te dan los ángulos, clasificá por ángulos. Por ejemplo, 40°, 60° y 80° forman un triángulo acutángulo; como los tres ángulos son diferentes, también es escaleno.</p></div></div></article>
+        </div>
+      </section>
+      <section class="section" id="teoremas">
+        <div class="section-head"><h2>2. Reglas que usamos en los ejercicios</h2><p>Estas tres reglas sirven para decidir si existe un triángulo y calcular sus ángulos.</p></div>
+        <div class="grid">
+          <article class="card span-4"><span class="pill">Lados</span><h3>Desigualdad triangular</h3><p>La suma de los dos lados menores debe ser <b>mayor</b> que el lado mayor.</p><span class="math">a + b &gt; c</span><p>Con lados 7, 10 y 18: 7 + 10 = 17, y 17 no es mayor que 18. <b>No forman un triángulo.</b></p></article>
+          <article class="card span-4"><span class="pill">Ángulos interiores</span><h3>Siempre suman 180°</h3><span class="math">A + B + C = 180°</span><p>Si dos ángulos miden 54° y 68°:</p><span class="math">C = 180° − 54° − 68° = 58°</span><p>Como los tres son menores que 90°, es acutángulo.</p></article>
+          <article class="card span-4"><span class="pill">Ángulo exterior</span><h3>Sumá los dos interiores lejanos</h3><p>Un ángulo exterior mide lo mismo que los dos ángulos interiores que no comparten sus lados.</p><span class="math">Exterior = A + B</span><div class="example"><strong>Ejemplo:</strong> 48° + 63° = 111°.</div></article>
+          <article class="card span-12"><h3>Un dibujito para entender el ángulo exterior</h3><svg class="triangle-art" viewBox="0 0 460 190" role="img" aria-label="Triángulo ABC con el lado BC prolongado hasta D y un ángulo exterior en C"><line x1="110" y1="155" x2="255" y2="155" stroke="#17675a" stroke-width="3"/><line x1="255" y1="155" x2="390" y2="155" stroke="#17675a" stroke-width="3"/><line x1="110" y1="155" x2="205" y2="35" stroke="#17675a" stroke-width="3"/><line x1="205" y1="35" x2="255" y2="155" stroke="#17675a" stroke-width="3"/><path d="M255 155 A42 42 0 0 1 288 123" fill="none" stroke="#f27858" stroke-width="4"/><text x="100" y="176" fill="#17332f" font-size="16">B</text><text x="202" y="26" fill="#17332f" font-size="16">A</text><text x="246" y="176" fill="#17332f" font-size="16">C</text><text x="395" y="176" fill="#17332f" font-size="16">D</text><text x="292" y="126" fill="#f27858" font-size="14">exterior</text><text x="193" y="78" fill="#60746f" font-size="14">A</text><text x="132" y="146" fill="#60746f" font-size="14">B</text></svg><p class="tiny">BC se prolonga hasta D. El ángulo ACD es exterior; por eso mide lo mismo que los ángulos interiores A y B sumados.</p></article>
+        </div>
+      </section>
+      <section class="section" id="transversal">
+        <div class="section-head"><h2>3. Ángulos entre paralelas y una transversal</h2><p>Una transversal cruza dos rectas. Si esas rectas son paralelas, se forman pares de ángulos con relaciones conocidas.</p></div>
+        <div class="grid">
+          <article class="card span-6"><h3>Ubicá los ángulos</h3><svg class="angle-art" viewBox="0 0 430 215" role="img" aria-label="Dos rectas paralelas horizontales cruzadas por una transversal; ocho ángulos numerados"><line class="line" x1="26" y1="55" x2="404" y2="55"/><line class="line" x1="26" y1="155" x2="404" y2="155"/><line class="transversal" x1="95" y1="205" x2="305" y2="5"/><circle class="cross" cx="252.5" cy="55" r="3.5"/><circle class="cross" cx="147.5" cy="155" r="3.5"/><text class="n" x="225" y="38">1</text><text class="n" x="270" y="38">2</text><text class="n" x="270" y="80">3</text><text class="n" x="225" y="80">4</text><text class="n" x="120" y="138">5</text><text class="n" x="165" y="138">6</text><text class="n" x="165" y="180">7</text><text class="n" x="120" y="180">8</text><text class="desc" x="32" y="48">L₁</text><text class="desc" x="32" y="148">L₂</text><text class="desc" x="330" y="30">L₁ ∥ L₂</text></svg><p class="tiny">Los ángulos 1–4 rodean el cruce de arriba; 5–8 rodean el cruce de abajo.</p></article>
+          <article class="card span-6"><h3>Reglas para encontrar medidas</h3><ul><li><b>Correspondientes:</b> misma posición en cada cruce; miden igual. Ejemplo: 1 = 5.</li><li><b>Alternos internos:</b> entre las paralelas y en lados opuestos de la transversal; miden igual. Ejemplo: 3 = 5 o 4 = 6.</li><li><b>Alternos externos:</b> fuera de las paralelas y en lados opuestos; miden igual. Ejemplo: 1 = 7.</li><li><b>Interiores del mismo lado:</b> entre las paralelas y al mismo lado de la transversal; suman 180°. Ejemplo: 3 + 6 = 180°.</li><li><b>Opuestos por el vértice:</b> están frente a frente en el mismo cruce; miden igual.</li></ul></article>
+          <article class="card span-12 callout"><h3>Cómo resolver una ecuación</h3><p>Si dos ángulos interiores del mismo lado miden 2x + 10° y 3x − 5°, son suplementarios:</p><span class="math">(2x + 10) + (3x − 5) = 180 → 5x + 5 = 180 → x = 35</span><p>Comprobación: 2(35)+10 = 80° y 3(35)−5 = 100°. Juntos suman 180°.</p></article>
+        </div>
+      </section>
+      <section class="section" id="practica">
+        <div class="section-head"><h2>4. Práctica guiada</h2><p>Intentá cada ejercicio primero y luego abrí la respuesta para revisar el procedimiento.</p></div>
+        <div class="grid">
+          <article class="card span-6"><span class="pill">Triángulos</span><h3>Probá las tres reglas</h3>
+            <div class="question"><p>1. ¿Pueden 5 cm, 8 cm y 9 cm ser los lados de un triángulo?</p><details><summary>Ver respuesta</summary><p class="answer">Sí. 5 + 8 = 13 &gt; 9; también 5 + 9 &gt; 8 y 8 + 9 &gt; 5. Es escaleno porque las tres medidas son distintas.</p></details></div>
+            <div class="question"><p>2. Un triángulo tiene ángulos de 48° y 67°. ¿Cuánto mide el tercero y cómo se clasifica?</p><details><summary>Ver respuesta</summary><p class="answer">180° − 48° − 67° = 65°. Los tres ángulos son agudos; es acutángulo. Como los tres son diferentes, también es escaleno.</p></details></div>
+            <div class="question"><p>3. Un triángulo isósceles tiene un ángulo de 50° entre sus lados iguales. ¿Cuánto mide cada ángulo de la base?</p><details><summary>Ver respuesta</summary><p class="answer">Quedan 180° − 50° = 130°. Los ángulos de la base son iguales: 130° ÷ 2 = 65° cada uno.</p></details></div>
+            <div class="question"><p>4. Los dos ángulos interiores alejados de un ángulo exterior miden 42° y 71°. ¿Cuánto mide el exterior?</p><details><summary>Ver respuesta</summary><p class="answer">42° + 71° = <b>113°</b>.</p></details></div>
+          </article>
+          <article class="card span-6"><span class="pill">Paralelas y transversal</span><h3>Usá la posición de los ángulos</h3>
+            <div class="question"><p>5. Un ángulo correspondiente mide 124°. ¿Cuánto mide el otro?</p><details><summary>Ver respuesta</summary><p class="answer">También <b>124°</b>. Los ángulos correspondientes son iguales cuando las rectas son paralelas.</p></details></div>
+            <div class="question"><p>6. Un ángulo interior mide 115°. ¿Cuánto mide el interior del mismo lado de la transversal?</p><details><summary>Ver respuesta</summary><p class="answer">180° − 115° = <b>65°</b>. Los interiores del mismo lado son suplementarios.</p></details></div>
+            <div class="question"><p>7. Dos ángulos alternos internos miden 3x + 5° y 2x + 25°. Encontrá x.</p><details><summary>Ver respuesta</summary><p class="answer">Son iguales: 3x + 5 = 2x + 25. Restá 2x y 5: <b>x = 20</b>. Cada ángulo mide 65°.</p></details></div>
+            <div class="question"><p>8. Dos ángulos del mismo lado miden 2x + 10° y 3x − 5°. Encontrá x.</p><details><summary>Ver respuesta</summary><p class="answer">Suman 180°: 2x+10+3x−5=180. Entonces 5x+5=180 y <b>x=35</b>.</p></details></div>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="quiz">
+        <div class="section-head"><h2>5. Quiz de repaso</h2><p>Marcá una respuesta por pregunta y revisá cuántas acertaste.</p></div>
+        <article class="card span-12"><form id="quizForm" class="quiz"></form><div class="quiz-actions"><button class="small" type="button" id="checkQuiz">Revisar respuestas</button><button class="small" type="button" id="resetQuiz">Borrar selección</button><span class="result" id="quizResult" aria-live="polite"></span></div><div id="quizFeedback" class="note" aria-live="polite"></div></article>
+      </section>
+      <section class="section" id="repaso">
+        <div class="section-head"><h2>6. Lista para revisar antes del examen</h2><p>Marcá cada objetivo cuando ya lo podás resolver sin ayuda.</p></div>
+        <article class="card span-12"><div class="checklist" id="checklist">
+          <label><input type="checkbox" data-topic="clasificar"><span>Clasifico triángulos por sus lados y por sus ángulos.</span></label>
+          <label><input type="checkbox" data-topic="desigualdad"><span>Uso la desigualdad triangular para decidir si tres longitudes forman un triángulo.</span></label>
+          <label><input type="checkbox" data-topic="suma"><span>Calculo un ángulo faltante usando la suma de 180°.</span></label>
+          <label><input type="checkbox" data-topic="exterior"><span>Aplico la regla del ángulo exterior.</span></label>
+          <label><input type="checkbox" data-topic="paralelas"><span>Distingo ángulos correspondientes, alternos y los interiores del mismo lado.</span></label>
+          <label><input type="checkbox" data-topic="ecuacion"><span>Planteo y resuelvo ecuaciones con medidas de ángulos.</span></label>
+        </div><p class="result" id="checkMessage" aria-live="polite"></p><button class="small" id="resetProgress" type="button">Borrar mi progreso</button></article>
+      </section>
+      <section class="section" id="fuentes">
+        <article class="card span-12"><h3>Temas tomados de las guías compartidas</h3><p>Clasificación y teoremas sobre triángulos; relaciones entre ángulos formados por rectas paralelas y una transversal. Los ejercicios de esta página son ejemplos de repaso preparados para practicar esas ideas.</p><p class="tiny">Fuentes de estudio: <i>Práctica de triángulos VII</i> (4 páginas) y <i>Guía 2 de ángulos entre paralelas y una transversal</i> (3 páginas). Consultá también las hojas originales y el cuaderno de clase.</p></article>
+      </section>
+    </main>
+    <footer class="footer"><a class="back" href="../index.html">← Volver al primer repaso de geometría</a><p>El progreso de esta página se guarda solo en este navegador.</p></footer>
+  </div>
+  <script>
+    const quizItems=[
+      {q:"¿Cómo se llama un triángulo con dos lados iguales?",o:["Escaleno","Isósceles","Equilátero"],a:1,e:"Isósceles: tiene dos lados de igual medida."},
+      {q:"¿Pueden 4, 7 y 12 ser las longitudes de un triángulo?",o:["Sí, porque todas son distintas","No, porque 4 + 7 no supera 12","Sí, porque 4 + 12 supera 7"],a:1,e:"No: los dos menores suman 11, que es menor que 12."},
+      {q:"Un triángulo tiene ángulos 46° y 81°. ¿Cuánto mide el tercero?",o:["53°","63°","73°"],a:0,e:"180° − 46° − 81° = 53°."},
+      {q:"Un triángulo con ángulos 105°, 40° y 35° es…",o:["Acutángulo","Rectángulo","Obtusángulo"],a:2,e:"Tiene un ángulo mayor que 90°: es obtusángulo."},
+      {q:"Los dos ángulos interiores alejados miden 32° y 48°. ¿Cuánto mide el exterior?",o:["80°","100°","148°"],a:0,e:"El exterior es la suma: 32° + 48° = 80°."},
+      {q:"Si dos rectas paralelas son cruzadas por una transversal, ¿cuánto mide el ángulo correspondiente a uno de 124°?",o:["56°","124°","180°"],a:1,e:"Los correspondientes miden igual: 124°."},
+      {q:"Un alterno interno mide 72°. ¿Cuánto mide su pareja?",o:["72°","108°","118°"],a:0,e:"Los alternos internos miden igual cuando las rectas son paralelas."},
+      {q:"Un ángulo interior del mismo lado mide 115°. ¿Cuánto mide el otro?",o:["55°","65°","115°"],a:1,e:"Son suplementarios: 180° − 115° = 65°."},
+      {q:"Dos ángulos correspondientes miden 4x + 7° y 2x + 31°. ¿Cuánto vale x?",o:["10","12","19"],a:1,e:"Igualá las medidas: 4x+7=2x+31. Entonces 2x=24 y x=12."},
+      {q:"Un triángulo isósceles tiene un ángulo de 50° entre los lados iguales. ¿Cuánto mide cada ángulo de la base?",o:["50°","60°","65°"],a:2,e:"Los dos ángulos de la base suman 130° y son iguales: 65° cada uno."}
+    ];
+    const form=document.getElementById('quizForm');
+    form.innerHTML=quizItems.map((item,i)=>`<fieldset class="quiz-q"><legend><p>${i+1}. ${item.q}</p></legend>${item.o.map((option,j)=>`<label><input type="radio" name="q${i}" value="${j}"><span>${option}</span></label>`).join('')}<p class="note" id="feedback${i}" aria-live="polite"></p></fieldset>`).join('');
+    document.getElementById('checkQuiz').addEventListener('click',()=>{let score=0,answered=0;quizItems.forEach((item,i)=>{const selected=form.querySelector(`input[name="q${i}"]:checked`);const note=document.getElementById(`feedback${i}`);if(!selected){note.textContent='Te falta marcar una respuesta.';note.style.color='#a5533c';return}answered++;const correct=Number(selected.value)===item.a;if(correct)score++;note.textContent=(correct?'¡Correcto! ':'Revisá esta. ')+item.e;note.style.color=correct?'#17675a':'#a5533c'});document.getElementById('quizResult').textContent=answered===quizItems.length?`Resultado: ${score} de ${quizItems.length}.`:`${answered} de ${quizItems.length} respondidas.`;document.getElementById('quizFeedback').textContent=score===quizItems.length?'¡Excelente!':score>=7?'Vas muy bien. Repasá las que fallaste.':'Revisá las reglas y volvé a intentarlo.'});
+    document.getElementById('resetQuiz').addEventListener('click',()=>{form.reset();quizItems.forEach((_,i)=>{const note=document.getElementById(`feedback${i}`);note.textContent='';note.style.color=''});document.getElementById('quizResult').textContent='';document.getElementById('quizFeedback').textContent=''});
+    const boxes=[...document.querySelectorAll('#checklist input')],progressText=document.getElementById('checkMessage');function refreshProgress(){let count=0;boxes.forEach(box=>{const done=localStorage.getItem('mate-vii-new-'+box.dataset.topic)==='1';box.checked=done;box.closest('label').classList.toggle('done',done);if(done)count++});progressText.textContent=count===boxes.length?'¡Listo! Ya repasaste todos los objetivos.':`${count} de ${boxes.length} objetivos marcados.`}boxes.forEach(box=>box.addEventListener('change',()=>{localStorage.setItem('mate-vii-new-'+box.dataset.topic,box.checked?'1':'0');refreshProgress()}));document.getElementById('resetProgress').addEventListener('click',()=>{boxes.forEach(box=>localStorage.removeItem('mate-vii-new-'+box.dataset.topic));refreshProgress()});document.getElementById('printPage').addEventListener('click',()=>window.print());refreshProgress();
+  </script>
+</body>
+</html>

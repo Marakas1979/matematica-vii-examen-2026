@@ -1,10 +1,10 @@
 # Repaso de Matemática VII
 
-Portal de estudio de geometría para preparar el examen del tercer trimestre de séptimo año. Incluye los temas del temario, ejemplos, ejercicios resueltos y las hojas de práctica compartidas.
+Portal de estudio de Matemática VII. La página principal cubre puntos, rectas y ángulos; `nuevo-examen/` agrega clasificación y teoremas de triángulos, además de ángulos entre paralelas y una transversal. Cada página incluye ejemplos y práctica.
 
 ## Ver localmente
 
-Abrí `index.html` en un navegador. Las fotos de las prácticas están en `imagenes/` y el portal las carga desde esa carpeta.
+Abrí `index.html` en un navegador. Las fotos de las prácticas anteriores están en `imagenes/`; desde la página principal se puede entrar al repaso nuevo.
 
 ## Publicación
 
